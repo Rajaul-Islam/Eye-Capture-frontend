@@ -17,16 +17,16 @@ const ProductScreen = () => {
 
   console.log(id);
 
-  const [products, setProducts] = useState([]);
+  const [product, setProducts] = useState([]);
   useEffect(() => {
-    fetch("/medicine.json")
+    fetch(`http://localhost:5000/products/${id}`)
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
         setProducts(data);
       });
   }, []);
-  const product = products.find((p) => p.id === id);
+  // const product = products.find((p) => p.id === id);
 
   console.log(product);
   return (
