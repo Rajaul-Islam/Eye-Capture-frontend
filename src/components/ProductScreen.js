@@ -12,7 +12,7 @@ import {
 import ReactStars from "react-rating-stars-component";
 
 const ProductScreen = () => {
-  const { id } = useParams();
+  const {id } = useParams();
   console.log(id);
 
   console.log(id);
@@ -38,7 +38,7 @@ const ProductScreen = () => {
           </Link>
           <Row>
             <Col md={6}>
-              <Image src={product.img} alt={product.name} fluid />
+              <Image src={product.image} alt={product.name} fluid />
             </Col>
             <Col md={3} className="">
               <ListGroup variant="flush">

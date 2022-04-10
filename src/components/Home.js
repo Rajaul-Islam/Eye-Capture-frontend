@@ -18,7 +18,7 @@ const Home = () => {
      <Row xs={2} md={4} className="g-4 ">
         {products.map((product) => (
           <Col>
-            <Product id={product.id} product={product}></Product>
+            <Product id={product._id} product={product}></Product>
           </Col>
         ))}
       </Row>
