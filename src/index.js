@@ -1,14 +1,31 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDOM from "react-dom";
+import "./index.css";
+import App from "./App";
+import reportWebVitals from "./reportWebVitals";
+import { configureStore } from "@reduxjs/toolkit";
+import { Provider } from "react-redux";
+import store from "./store";
 
+//redux toolkit configureStore() er modde devtoll thunk soho deya ase
+
+
+
+
+//   const store = configureStore({
+//        reducer: {},
+// });
+
+
+
+//
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
+  <Provider store={store}>
+    <React.StrictMode>
+      <App />
+    </React.StrictMode>
+    
+  </Provider>, document.getElementById('root')
 );
 
 // If you want to start measuring performance in your app, pass a function
